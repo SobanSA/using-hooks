@@ -42,8 +42,7 @@ function WeatherUpdate() {
                 onClick={() => {
                     setCoords({ lat: 51.5072, long: -0.1276 });
                     setCurrentCity("London");
-                }}
-            >London</button>
+                }}>London</button>
             <button onClick={() => {
                 setCoords({ lat: 24.4667, long: 54.3667 });
                 setCurrentCity("Abudhabi");
@@ -52,7 +51,8 @@ function WeatherUpdate() {
                 setCoords({ lat: -37.8136, long: 144.9631 });
                 setCurrentCity("Melbourne");
             }}> Melbourne</button>
-            <p>{currentCity}</p>
+
+            <h3>{currentCity}</h3>
             {weather ? (
                 <div>
                     <p>Temperature: {weather.temperature}°C</p>
