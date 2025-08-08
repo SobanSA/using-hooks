@@ -1,4 +1,4 @@
-import ContextOne from "./ContextOne";
+import ContextOne from "./contexts/ContextOne";
 import { useContext } from "react";
 
 function ComponentFour(props) {

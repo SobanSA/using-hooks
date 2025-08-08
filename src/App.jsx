@@ -3,7 +3,9 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import ComponentOne from './assets/components/ComponentOne'
-import ContextOne from './assets/components/ContextOne'
+import ContextOne from './assets/components/contexts/ContextOne'
+import RandomUserCard from './assets/components/effects/EffectOne'
+import WeatherUpdate from './assets/components/effects/EffectTwo'
 
 function App() {
   const [name] = useState("Sohaib");
@@ -11,12 +13,13 @@ function App() {
   return (
     <>
 
-      <ContextOne.Provider value={name}>
+      {/* <ContextOne.Provider value={name}>
 
         <ComponentOne userName={name} />
 
       </ContextOne.Provider>
-
+      <RandomUserCard /> */}
+      <WeatherUpdate />
 
     </>
   )
