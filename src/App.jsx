@@ -7,6 +7,13 @@ import ContextOne from './assets/components/contexts/ContextOne'
 import RandomUserCard from './assets/components/effects/EffectOne'
 import WeatherUpdate from './assets/components/effects/EffectTwo'
 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import About from './pages/About';
+import Profile from './pages/Profile';
+
+
 function App() {
   const [name] = useState("Sohaib");
 
@@ -14,12 +21,20 @@ function App() {
     <>
 
       {/* <ContextOne.Provider value={name}>
-
         <ComponentOne userName={name} />
-
       </ContextOne.Provider>
-      <RandomUserCard /> */}
-      <WeatherUpdate />
+      <RandomUserCard /> 
+      <WeatherUpdate />*/}
+
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/profile" element={<Profile />} />
+        </Routes>
+      </Router>
+
 
     </>
   )
